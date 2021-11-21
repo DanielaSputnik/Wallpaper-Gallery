@@ -1,0 +1,93 @@
+.fw-window {
+    position: fixed;
+    top: 0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.836);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 90;
+}
+
+.fw-inner {
+    position: relative;
+    padding: 32px;
+    width: 100%;
+    max-width: 1300px;
+    border-radius: 5px;
+    padding: 40px;
+    cursor: default;
+}
+
+.fw-inner h4 {
+    color:white;
+    font-size: 1.5rem;
+    margin: 15px
+}
+
+.fw-close-btn {
+    position: absolute;
+    top:-2rem;
+    right: -2rem;
+	transition: transform .25s, opacity .25s;
+	opacity: .4;
+	cursor: pointer;
+	font-size: 5rem;
+	font-family: serif;
+    background: transparent;
+    color:whitesmoke;
+    border:none;
+}
+.fw-close-btn:before{
+	content: "\d7";
+}
+.fw-close-btn:hover{
+	opacity: 1;
+	transform: rotate(90deg);
+}
+
+.sld-L-arrow, .sld-R-arrow{
+    position: absolute;
+    top: 45%;
+    font-size: 4rem;
+    font-weight: bold;
+    color:whitesmoke;
+    background: transparent;
+    border: none;
+    z-index: 10;
+    cursor: pointer;
+    user-select: none;
+    padding: 5rem 0rem;
+    transition: transform .25s, opacity .25s;
+    opacity: .3;
+}
+
+.sld-R-arrow {
+    right: -5rem;
+}
+.sld-L-arrow {
+    left: -5rem;
+}
+
+.sld-L-arrow:hover {
+    opacity: 1;
+    transform:translateX(-25%);
+}
+
+.sld-R-arrow:hover {
+    opacity: 1;
+    transform:translateX(25%);
+}
+
+.slide {
+    opacity: 0;
+    transition-duration: 1s ease;
+}
+
+.slide.active {
+    opacity: 1;
+    transition-duration: 1s;
+    transform: scale(1.08);
+}

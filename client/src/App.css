@@ -1,0 +1,109 @@
+
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,100&display=swap');
+
+body {
+    background-color: rgba(30, 30 , 30 ,30);
+    padding: 3rem 10rem ;
+    font-family: 'Raleway', sans-serif;
+}
+
+.title {
+    font-family: 'IM Fell English SC', serif;
+    color: #dbb472;
+    text-align: center;
+    align-items: top;
+    font-size: 3rem;
+    font-size: 3.5vw;
+    padding: 30px;
+}
+
+form {
+	margin: 1rem 0 1rem 0;
+	display: grid;
+	gap: 10px;
+}
+
+@media only screen and (min-width: 960px) {
+	form {
+		grid-template-columns: 5fr 1fr 1fr;
+	}
+}
+
+.image-grid {
+	display: grid;
+	gap: 1.5rem;
+	grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+    margin: 1rem, 3rem, 1rem, 3rem;
+}
+
+img {
+	width: 100%;
+	height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+    border-radius: 8px;
+    box-shadow: 5px 5px 20px black;
+}
+
+.image-view{
+    margin: 0;
+    width: 100%;
+    padding: .3rem 0;
+    font-size: 2rem;
+    margin: .5rem 0 .1rem 0rem;
+}
+
+.image-footer {
+    visibility: hidden;   
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    bottom: 55px;
+    padding: 0px 10px 0px 15px;
+    background-color: rgba(0, 0, 0, 0.444);
+}
+
+.image-view:hover .image-footer {
+    visibility: visible;
+    transition: color .15s linear;
+}
+
+.rating {
+    font-size: 1.5rem;
+    min-width: 125px;
+}
+
+.image-footer h6 {
+    font-size: 20px;
+    margin:0;
+    color: rgb(255, 255, 255);
+}
+
+.footer {
+	display: flex;
+	justify-content: center;
+}
+
+.load-more {
+    font-family: 'IM Fell English SC', serif;
+	font-size: 30px;
+	border-radius: 10px;
+	border: none;
+	padding: 10px 35px 10px 35px;
+    background-color: #efc88b;
+    cursor: pointer;
+	margin: 3rem 0 3rem 0;
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.432);
+}
+
+.load-more:hover {
+    color: white;
+    box-shadow: 10px 10px 1px rgba(0, 0, 0, 0.432)
+}
+.load-more:active {
+    transform:translateY(5%);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.432)
+};

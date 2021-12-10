@@ -6,7 +6,10 @@ function FullView(props) {
         <div className='fw-window'>
             <div className='fw-inner' >
                 <button className='fw-close-btn'
-                    onClick={() => props.setTrigger(false)}>
+                    onClick={() => {
+                        props.setTrigger ? props.setTrigger(false) : props.setTrigger(true)
+                    }
+                    }>
                 </button>
                 {props.children}
             </div>

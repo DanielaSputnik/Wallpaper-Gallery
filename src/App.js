@@ -46,8 +46,8 @@ const App = () => {
 
     const showFullSize = (e) => {
         e.preventDefault();
-        setToggleFullView(true)
-        setSelectedImage(e.target.id)
+        toggleFullView ? setToggleFullView(false) : setToggleFullView(true) ;
+        setSelectedImage(e.target.id);
     }
 
     var imageIndex = imageList.findIndex(function (image) {
@@ -56,7 +56,8 @@ const App = () => {
 
     return (
         <>
-            <FullView trigger={toggleFullView}
+            <FullView
+                trigger={toggleFullView}
                 setTrigger={setToggleFullView}
             >
                 <ImageSlider fullGallery={imageList}

@@ -4,37 +4,25 @@
 
 body {
     background-color: rgba(30, 30 , 30 ,30);
-    padding: 3rem 10rem ;
+    padding: 1rem 9vh;
     font-family: 'Raleway', sans-serif;
+    min-width: 300px;
 }
+
 
 .title {
     font-family: 'IM Fell English SC', serif;
     color: #dbb472;
     text-align: center;
-    align-items: top;
-    font-size: 3rem;
-    font-size: 3.5vw;
+    font-size: 6vh;
     padding: 30px;
 }
 
-form {
-	margin: 1rem 0 1rem 0;
-	display: grid;
-	gap: 10px;
-}
-
-@media only screen and (min-width: 960px) {
-	form {
-		grid-template-columns: 5fr 1fr 1fr;
-	}
-}
 
 .image-grid {
 	display: grid;
 	gap: 1.5rem;
 	grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
-    margin: 1rem, 3rem, 1rem, 3rem;
 }
 
 img {
@@ -51,7 +39,6 @@ img {
     width: 100%;
     padding: .3rem 0;
     font-size: 2rem;
-    margin: .5rem 0 .1rem 0rem;
 }
 
 .image-footer {
@@ -106,4 +93,10 @@ img {
 .load-more:active {
     transform:translateY(5%);
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.432)
-};
+}
+
+@media only screen and (max-width: 600px){
+    body {
+        padding: 2rem;
+    }    
+}

@@ -70,7 +70,7 @@ const App = () => {
                 {imageList.map((image, index) => (
                     <div className='image-view'
                         key={index}>
-                        <img src={image.url} alt={image.public_id} loading="lazy" id={image.asset_id} onClick={showFullSize}></img>
+                        <img src={image.secure_url} alt={image.public_id} loading="lazy" id={image.asset_id} onClick={showFullSize}></img>
                         <div className='image-footer'>
                             <h6>{image.public_id} </h6>
                             <StarRating rating={image.rating} />

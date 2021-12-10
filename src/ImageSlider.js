@@ -29,7 +29,7 @@ const ImageSlider = ({fullGallery, selectedImageIndex}) => {
                 return (
                     <div className={index === currentImage ? 'slide active' : 'slide'} key={index}>
                         {index === currentImage && (<h4>{image.public_id}</h4>)}
-                        {index === currentImage && (<img src={image.url} alt=''/>)}                                               
+                        {index === currentImage && (<img src={image.secure_url} alt=''/>)}
                     </div>
                 )                
             })}
